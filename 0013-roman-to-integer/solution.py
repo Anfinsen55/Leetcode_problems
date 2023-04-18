@@ -1,5 +1,5 @@
-class Solution:
-    def romanToInt(self, s: str) -> int:
+class Solution(object):
+    def romanToInt(self, s):
         roman={"I":1,
         "V":5,
         "X":10,
