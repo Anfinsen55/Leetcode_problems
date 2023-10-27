@@ -1,11 +1,5 @@
-class Solution(object):
-    def mergeAlternately(self, word1, word2):
-        merge=""
-        i=0
-        while(i<len(word1)) or (i<len(word2)):
-            if (i<len(word1)):
-                merge += word1[i]
-            if(i<len(word2)):
-                merge += word2[i]
-            i +=1
-        return merge
+class Solution:
+    def mergeAlternately(self, word1: str, word2: str) -> str:
+        res=""
+        return res.join([x for x in itertools.chain.from_iterable(itertools.zip_longest(list(word1),list(word2))) if x])
+        
